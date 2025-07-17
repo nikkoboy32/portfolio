@@ -1,0 +1,21 @@
+@media screen and (max-width: 1600px ) {
+    .project-flex section {min-height: 530px;}
+}
+
+@media screen and (max-width: 1300px) {
+    .wrapper {padding:0 20px;}
+    .project-flex { flex-wrap: wrap; }
+    .project-flex section {max-width: 330px;}
+}
+
+@media screen and (max-width: 1024px) {
+
+    header {transform: translateX(-290px); }
+    .close-btn, .burger-btn{display:block;}
+    
+    .wrapper {margin: 0;}
+
+.project-flex section {max-width: 380px;}
+
+
+}

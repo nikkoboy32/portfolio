@@ -12,15 +12,15 @@
     --headingSize: 40px;
     --bodySize: 18px;
 }
-
-.wrapper {/*width: 100%; max-width: 1390px;*/ margin:0 0 0 290px; padding: 0 100px;}
+html,body {overflow-x: hidden;}
+.wrapper {/*width: 100%; max-width: 1390px;*/ margin:0 0 0 290px; padding: 0 100px; transition: 1s ease;}
 body {font-size: var(--bodySize); font-family: var(--bodyFont); color: #fff;}
 ul li {list-style: none;}
 ul li a {color: #fff; text-decoration: none;}
 a {color: #fff; text-decoration: none;}
 .btn { display: block; width: fit-content; background: var(--secondaryColor); padding: 10px 30px 13px; border-radius: 50px; margin: 20px auto 10px; font-weight: 500; }
 
-header{position: fixed; left: 0; top: 0; bottom: 0; width: 100%; max-width: 290px; background: var(--primaryColor); border-right: 1px solid var(--secondaryColor); z-index: 999;}
+header{position: fixed; left: 0; top: 0; bottom: 0; width: 100%; max-width: 290px; background: var(--primaryColor); border-right: 1px solid var(--secondaryColor); z-index: 999; transition: 1s ease;}
 #header {background: var(--primaryColor); }
 .header-con {padding: 50px; }
 .header-con .logo-con h2 {font-size: var(--headingSize); color: #fff; font-weight: 600; font-family: var(--headingFont);}
@@ -44,9 +44,16 @@ header{position: fixed; left: 0; top: 0; bottom: 0; width: 100%; max-width: 290p
 .banner-con .banner-content p {font-weight: 500; margin: 20px 0 30px; }
 .icons-con ul { display: flex; gap: 15px; justify-content: center; align-items: center; }
 .banner-content .btn { display: block; width: fit-content; background: var(--secondaryColor); padding: 10px 30px 13px; border-radius: 50px; margin: 20px auto 10px; font-weight: 500; }
+.burger-btn { position: absolute; top: 30px; left: 40px;cursor: pointer; z-index: 99; display: none;}
+.burger-btn figure { width: 100%; }
+.burger-btn figure img { width: 100%; max-width: 50px; }
+.close-btn { position: absolute; top: 20px; right: 20px; cursor: pointer; display: none; }
+.close-btn figure { width: 100%; }
+.close-btn figure img { width: 100%; max-width: 40px; }
+
 
 main {color: #fff;background: #020202; }
-.main-con { padding: 80px 15px 130px; }
+.main-con { padding: 80px 15px 130px; position:relative;}
 .main-con > h2 {color: #fff; font-family: var(--headingFont); font-size: var(--headingSize); margin-bottom: 50px; position:relative;}
 .main-con > h2::before { content: 'About Me'; position: absolute; top: -60px; left: -20px; z-index: 0; font-size: 75px; color: #fff; text-shadow: -1px 0 var(--secondaryColor), 0 1px var(--secondaryColor), 1px 0 var(--secondaryColor), 0 -1px var(--secondaryColor); opacity: 0.2; }
 .main-flex { display: flex; align-items: center; gap: 20px; justify-content: space-between; }
@@ -79,7 +86,7 @@ main {color: #fff;background: #020202; }
 .tech-stack-icons-con section:nth-child(11) { top: 25%; left: 14%; animation-delay: 0.8s; }
 
 #projects {background: #020202;}
-.projects-con {padding: 80px 15px 80px; color: #000}
+.projects-con {padding: 80px 0 80px; color: #000}
 .projects-con > h2 {color: #fff; font-family: var(--headingFont); font-size: var(--headingSize); margin-bottom: 50px; position:relative;}
 .projects-con > h2::before { content: 'Projects'; position: absolute; top: -60px; left: -20px; z-index: -1; font-size: 75px; color: #fff; text-shadow: -1px 0 var(--secondaryColor), 0 1px var(--secondaryColor), 1px 0 var(--secondaryColor), 0 -1px var(--secondaryColor); opacity: 0.2;z-index: 1; }
 .project-flex { display: flex; justify-content: center; align-items: flex-start; gap: 20px; }
@@ -232,25 +239,20 @@ border-top-right-radius: 20px;}
     }
   }
 
-  #svg-stage {
-  max-width: 600px;
-  overflow: visible;
-  margin-top: 60vh;
+.shuriken-wrap {
+  width: 160px;
+  height: 160px;
+ position: absolute;
+ right: 0;
+top: 40px;
+}
+#shuriken {
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 50%;
 }
 
-.ball {
-  fill: white;
-  visibility: hidden;
-}
-
-.line {
-  fill: none;
-  stroke: white;
-  stroke-width: 2px;
-}
-
-text {
-  fill: white;
-  font-size: 15px; 
-  visibility: hidden;
+.v-flip {
+  display: inline-block;
+  transform-style: preserve-3d;
 }
