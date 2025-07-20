@@ -1,5 +1,6 @@
 @media screen and (max-width: 1600px ) {
     .project-flex section {min-height: 530px;}
+    .for-fun-projects-flex section {min-height: 600px;}
 }
 
 @media screen and (max-width: 1300px) {
@@ -11,11 +12,46 @@
 @media screen and (max-width: 1024px) {
 
     header {transform: translateX(-290px); }
-    .close-btn, .burger-btn{display:block;}
-    
     .wrapper {margin: 0;}
+    .close-btn, .burger-btn{display:block;}
+    .for-fun-projects-flex section .project-content .tools-used ul {flex-wrap: wrap;}
+    .for-fun-projects-flex section {min-height: 590px;}
+    .project-flex section {max-width: 380px;}
+    
 
-.project-flex section {max-width: 380px;}
+}
 
+@media screen and (max-width: 800px) {
+    .main-con {padding: 80px 15px 80px;}
+    .main-flex { flex-wrap: wrap;padding-top: 40px; }
+    .main-flex section:last-child {max-width: 680px; text-align: center; }
+    .main-btn {margin: 20px auto 0;}
+
+    #tech-stack {padding: 80px 15px 20px; }
+    .tech-stack-icons-con section:nth-child(8) {top: 18%; left: 75%;}
+    .tech-stack-icons-con section:nth-child(5) {top: 56%; left: 73%; }
+    .tech-stack-icons-con {min-height: 570px; } 
+
+    .for-fun-projects > h2::before {font-size: 55px; }
+
+    #footer h3 {letter-spacing: 20px;}
+
+}
+@media screen and (max-width: 600px) {
+    .main-con > h2::before {font-size: 65px;}
+    .shuriken-wrap {right: -10px; top: 50px; }
+
+    .tech-stack-con > h2::before {font-size: 65px; }
+    .tech-stack-icons-con section:nth-child(1) {left: -5%; }
+    .tech-stack-icons-con section:nth-child(11) {left: -6%; }
+    .tech-stack-icons-con section:nth-child(6) {top: 34%; }
+    .tech-stack-icons-con section:nth-child(7) {left: 11%; }
+    .tech-stack-icons-con section:nth-child(10) {top: 85%; left: 50%; }
+    .tech-stack-icons-con section:nth-child(3) {top: 43%; }
+    .tech-stack-icons-con section:nth-child(8) {left: 58%; }
+    .tech-stack-icons-con section:nth-child(5) {left: 63%; }
+
+    .footer-con > h2::before {font-size: 65px; }
+    #footer h3 {font-size: 60px; letter-spacing: 10px; }
 
 }
