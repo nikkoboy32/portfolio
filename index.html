@@ -6,11 +6,27 @@
     <title>My Portfolio | Nikko</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./media.css">
+    <link rel="stylesheet" href="./animate.min.css">
     <link rel="stylesheet" href="./owl.carousel.min.css">
     <link rel="stylesheet" href="./owl.theme.default.min.css">
 </head>
 <body>
-   <header>
+
+   <div id="Modal">
+    <div id="Mod_container">
+        <div id="modboxcolor">
+            <div class="closee">×</div>
+              <div class="Mod_text">
+                  <figure><img
+                        src="./images/updated-resume-2025.jpg"
+                        alt="resume"></figure>
+              </div>
+          </div>
+           <a class="btn download-resume" href="./pdf/updated-resume-2025.pdf" class="" target="_blank" download>Download Resume</a>
+      </div>
+  </div>
+
+   <header class="" >
     <div class="close-btn-con">
       <div class="close-btn">
         <figure><img src="./images/icons/close-icon.png" alt="close-icon"></figure>
@@ -62,7 +78,7 @@
               <li><a href="https://www.onlinejobs.ph/jobseekers/info/2920349" target="_blank"><figure><img src="./images/icons/onlinejobs-logo.png" alt="icon"></figure></a></li>
             </ul>
           </div>
-          <a class="btn" href="#">View Resume</a>
+          <a class="btn" href="#" id="viewResumeBtn">View Resume</a>
         </div>
 
 
@@ -89,14 +105,14 @@
       <div class="main-con">
         <h2>About Me</h2>
         <div class="shuriken-wrap">
-            <svg id="shuriken" viewBox="0 0 100 100">
-              <path d="M50 0 L60 40 L100 50 L60 60 L50 100 L40 60 L0 50 L40 40 Z" fill="#872341"/>
-            </svg>
+           <figure><img src="./images/plus1.png" alt="icon" class="shuriken"></figure>
+           <figure><img src="./images/plus2.png" alt="icon" class="shuriken"></figure>
+           <!-- <figure><img src="./images/plus1.png" alt="icon" class="shuriken"></figure> -->
           </div>
 
 
         <div class="main-flex">
-          <section>
+          <section class="wow animate__backInLeft" data-wow-duration="2s" >
             <figure><img src="./images/nikko-gwapo.png" alt="nikko gwapo"></figure>
           </section>
 
@@ -367,6 +383,7 @@
 <script src="./js/jquery.min.js"></script>
 <script src="./js/owl.carousel.min.js"></script>
 <script src="./js/gsap.min.js"></script>
+<script src="./js/wow.min.js"></script>
 <script src="./js/TextPlugin.min.js"></script>
 <script src="./script.js"></script>
 </body>

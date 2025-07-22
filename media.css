@@ -17,7 +17,7 @@
     .for-fun-projects-flex section .project-content .tools-used ul {flex-wrap: wrap;}
     .for-fun-projects-flex section {min-height: 590px;}
     .project-flex section {max-width: 380px;}
-    
+    #banner::before {left: 0;}
 
 }
 
@@ -35,11 +35,22 @@
     .for-fun-projects > h2::before {font-size: 55px; }
 
     #footer h3 {letter-spacing: 20px;}
+    #Mod_container {width: 95%;}
+   
 
 }
 @media screen and (max-width: 600px) {
+
+    #myModal.modal{bottom: 75px; width: 90%;}
+    #myModal .modal-header h2{font-size: 25px;}
+    #myModal .modal-body .container{text-align: center;}
+    .open_modal{bottom: 45px; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; background: #000;}
+    .open_modal figure{display: flex; justify-content: center; align-items: center;}
+ 
+    .modal_left img{width: 20px;}
+
     .main-con > h2::before {font-size: 65px;}
-    .shuriken-wrap {right: -10px; top: 50px; }
+    .shuriken-wrap {right: -10px; top: 90px; }
 
     .tech-stack-con > h2::before {font-size: 65px; }
     .tech-stack-icons-con section:nth-child(1) {left: -5%; }
@@ -53,5 +64,7 @@
 
     .footer-con > h2::before {font-size: 65px; }
     #footer h3 {font-size: 60px; letter-spacing: 10px; }
+    .Mod_text figure img {width: 100%;} 
+
 
 }

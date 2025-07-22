@@ -41,8 +41,19 @@ $(document).ready(function(){
     }
 })
 
+new WOW().init();
 
-  const shuriken = $("#shuriken")
+$("#viewResumeBtn").click(function(e) {
+  e.preventDefault();
+  $("#Modal").css("display", "block");
+});
+
+  // Close modal on clicking the × button
+  $(".closee").click(function() {
+    $("#Modal").css("display", "none");
+  });
+
+  const shuriken = $(".shuriken")
 
   gsap.timeline({ repeat: -1 })
     .to(shuriken, {
