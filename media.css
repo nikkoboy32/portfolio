@@ -19,6 +19,9 @@
     .project-flex section {max-width: 380px;}
     #banner::before {left: 0;}
 
+    header.wow,.banner-con .banner-content p.wow, .icons-con.wow,.banner-content .btn.wow {animation: none !important}
+   
+
 }
 
 @media screen and (max-width: 800px) {
