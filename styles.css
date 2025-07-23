@@ -77,11 +77,13 @@ main::before {content: url(./images/semi-circle.png); position: absolute; top:0;
 .main-flex section:last-child h2 span { display: block; font-size: var(--headingSize); font-family: var(--headingFont); }
 .main-flex section:last-child p { margin: 15px 0; }
 .main-btn { margin: 20px 0 0; }
+.flip-heading {  perspective: 800px; }
+.flip-heading span { display: inline-block;  }
 
 
 #tech-stack {padding: 80px 15px 80px; background: var(--primaryColor);}
 .tech-stack-icons-con {position: relative; min-height: 600px;}
-.tech-stack-icons-con section {width: 100%; display: flex; align-items: center; gap: 10px; justify-content: center; background: transparent; padding: 5px 20px; border: 1px solid var(--secondaryColor); max-width: fit-content; border-radius: 40px; animation: float 6s ease-in-out infinite; position: absolute;  transition: 0.5s ease; cursor: pointer;}
+.tech-stack-icons-con section {width: 100%; display: flex; align-items: center; gap: 10px; justify-content: center; background: transparent; padding: 5px 20px; border: 1px solid var(--secondaryColor); max-width: fit-content; border-radius: 40px; position: absolute;  transition: 0.5s ease; cursor: pointer;}
 .tech-stack-icons-con section::before {content: ''; position: absolute; width: 0; height: 100%;background: var(--secondaryColor); z-index: -1; border-radius: 40px; transition: 0.5s ease;}
 .tech-stack-icons-con section:hover::before {width: 100%; }
 /* .tech-stack-icons-con section:hover { transform: scale(1.2) !important; transition: 0.2s ease !important; cursor:pointer;} */
@@ -92,14 +94,14 @@ main::before {content: url(./images/semi-circle.png); position: absolute; top:0;
 
 
 .tech-stack-icons-con section:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
-.tech-stack-icons-con section:nth-child(2) { top: 6%; left: 56%; animation-delay: 1s; }
-.tech-stack-icons-con section:nth-child(3) { top: 50%; left: -4%; animation-delay: 2s; }
-.tech-stack-icons-con section:nth-child(4) { top: 80%; left: 0%; animation-delay: 3s; }
-.tech-stack-icons-con section:nth-child(5) { top: 54%; left: 83%; animation-delay: 4s; }
-.tech-stack-icons-con section:nth-child(6) { top: 30%; left: 50%; animation-delay: 1.5s; }
+.tech-stack-icons-con section:nth-child(2) { top: 6%; left: 56%; animation-delay: 0.2s; }
+.tech-stack-icons-con section:nth-child(3) { top: 50%; left: -4%; animation-delay: 0.5s; }
+.tech-stack-icons-con section:nth-child(4) { top: 80%; left: 0%; animation-delay: 1s; }
+.tech-stack-icons-con section:nth-child(5) { top: 54%; left: 83%; animation-delay: 1.2s; }
+.tech-stack-icons-con section:nth-child(6) { top: 30%; left: 50%; animation-delay: 1.3s; }
 .tech-stack-icons-con section:nth-child(7) { top: 66%; left: 31%; animation-delay: 0.5s; }
-.tech-stack-icons-con section:nth-child(8) { top: 8%; left: 85%; animation-delay: 2.5s; }
-.tech-stack-icons-con section:nth-child(9) { top: 45%; left: 60%; animation-delay: 3.5s; }
+.tech-stack-icons-con section:nth-child(8) { top: 8%; left: 85%; animation-delay: 0.9s; }
+.tech-stack-icons-con section:nth-child(9) { top: 45%; left: 60%; animation-delay: 1.5s; }
 .tech-stack-icons-con section:nth-child(10) { top: 75%; left: 70%; animation-delay: 1.2s; }
 .tech-stack-icons-con section:nth-child(11) { top: 25%; left: 14%; animation-delay: 0.8s; }
 

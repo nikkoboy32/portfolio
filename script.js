@@ -110,4 +110,85 @@ $("#viewResumeBtn").click(function(e) {
     flipped = !flipped;
   }, 2000);
 
+  gsap.registerPlugin(ScrollTrigger);
+
+    const directions = [
+      'animate__fadeInTopLeft',
+      'animate__fadeInTopRight',
+      'animate__fadeInBottomLeft',
+      'animate__fadeInBottomRight'
+    ];
+
+    $('.tech-stack-icons-con section').each(function () {
+      const $section = $(this);
+      const randomClass = directions[Math.floor(Math.random() * directions.length)];
+
+    
+      ScrollTrigger.create({
+        trigger: $section[0],
+        start: "top 100%", // when section enters 80% of viewport
+        once: true, // only run once
+        onEnter: () => {
+          // Add animate.css fade-in class
+          $section.addClass('animate__animated ' + randomClass);
+
+          // When animation ends, remove animate.css and apply float
+          $section.one('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function () {
+            $section.removeClass('animate__animated ' + randomClass);
+
+            // Get any existing animation delay (fallback to 0)
+            const delayStr = $section.css('animation-delay') || '0s';
+            const delay = parseFloat(delayStr) || 0;
+
+            // Apply floating animation via GSAP
+            gsap.to($section[0], {
+              y: -15,
+              repeat: -1,
+              yoyo: true,
+              duration: 3,
+              ease: "power1.inOut",
+              delay: delay
+            });
+          });
+        }
+      });
+    });
+
+      $(".flip-heading").each(function () {
+        const text = $(this).text();
+        const spanned = $.map(text.split(""), function (char) {
+          return `<span>${char === " " ? "&nbsp;" : char}</span>`;
+        }).join("");
+        $(this).html(spanned);
+      });
+
+      // Step 2: Define a jump animation timeline every 2 seconds
+      setInterval(function () {
+        $(".flip-heading").each(function () {
+          const spans = $(this).find("span");
+
+          spans.each(function (i, el) {
+            const tl = gsap.timeline();
+            tl.to(el, {
+              y: -20,
+              duration: 0.5,
+              ease: "power2.out",
+              delay: i * 0.05
+            }).to(el, {
+              y: 0,
+              duration: 0.5,
+              ease: "power2.in"
+            });
+          });
+        });
+      }, 2000);
+
+      $(document).on("animationend", ".test-flip", function () {
+    gsap.from(".test-flip", {
+      opacity: 0,
+      rotation: 360,
+      duration: 0.6,
+      ease: "back.out(1.7)"
+    });
+  });
 }); 
