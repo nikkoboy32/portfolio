@@ -19,7 +19,7 @@
     .project-flex section {max-width: 380px;}
     #banner::before {left: 0;}
 
-    header.wow,.banner-con .banner-content p.wow, .icons-con.wow,.banner-content .btn.wow {animation: none !important}
+    header.wow,.banner-con .banner-content p.wow, .icons-con.wow,.banner-content .btn.wow {animation: none !important; visibility: unset !important;}
    
 
 }
